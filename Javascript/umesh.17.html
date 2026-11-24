@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q17 - Read File using AJAX</title>
+</head>
+<body>
+
+    <h2>Read External File using AJAX</h2>
+
+    <button onclick="readFile()">Read File</button>
+
+    <p id="output"></p>
+
+    <script>
+
+        function readFile() {
+
+            var xhr = new XMLHttpRequest();
+
+            xhr.open("GET", "sample.txt", true);
+
+            xhr.onreadystatechange = function() {
+
+                if (xhr.readyState == 4 && xhr.status == 200) {
+
+                    document.getElementById("output").innerText =
+                        xhr.responseText;
+
+                }
+
+            };
+
+            xhr.send();
+        }
+
+    </script>
+
+</body>
+</html>

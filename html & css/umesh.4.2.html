@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+
+    .demo-box {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      margin: 8px 0;
+      padding: 5px;
+    }
+
+    /* Target attribute containing word */
+    [class~="highlight"] {
+      background-color: #f1c40f;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="demo-box">
+    <p class="highlight">This paragraph has the highlight class</p>
+    <p>This paragraph doesn't have highlight</p>
+    <p class="highlight-box">This won't be selected (no exact match)</p>
+  </div>
+
+</body>
+</html>

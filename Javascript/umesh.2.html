@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Lab Work - Q2</title>
+</head>
+<body>
+
+    <h2>Number Operations (Reverse, Palindrome, Armstrong)</h2>
+
+    <label for="numInput">Enter a number: </label>
+    <input type="number" id="numInput">
+    <button onclick="checkNumber()">Check</button>
+
+    <div id="result"></div>
+
+    <script>
+        function checkNumber() {
+            var num = document.getElementById("numInput").value;
+            
+            if (num === "") {
+                alert("Please enter a valid number");
+                return;
+            }
+
+          
+            var temp = num;
+            var rev = 0;
+            var n = parseInt(num);
+            var original = n;
+
+            while (n > 0) {
+                var rem = n % 10;
+                rev = rev * 10 + rem;
+                n = Math.floor(n / 10);
+            }
+
+           
+            var isPalindrome = false;
+            if (original === rev) {
+                isPalindrome = true;
+            }
+
+            
+            var sum = 0;
+            var tempNum = original;
+            var digits = original.toString().length;
+
+            while (tempNum > 0) {
+                var digit = tempNum % 10;
+                sum += Math.pow(digit, digits);
+                tempNum = Math.floor(tempNum / 10);
+            }
+
+            var isArmstrong = false;
+            if (sum === original) {
+                isArmstrong = true;
+            }
+
+            
+            var output = "<p><b>Reversed Number:</b> " + rev + "</p>";
+            
+            if (isPalindrome) {
+                output += "<p><b>Palindrome:</b> Yes, it is a palindrome.</p>";
+            } else {
+                output += "<p><b>Palindrome:</b> No, it is not a palindrome.</p>";
+            }
+
+            if (isArmstrong) {
+                output += "<p><b>Armstrong:</b> Yes, it is an Armstrong number.</p>";
+            } else {
+                output += "<p><b>Armstrong:</b> No, it is not an Armstrong number.</p>";
+            }
+
+            document.getElementById("result").innerHTML = output;
+        }
+    </script>
+
+</body>
+</html>

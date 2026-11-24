@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Box Sizing Example</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        
+        .box {
+            width: 300px;
+            padding: 15px;
+            border: 5px solid green;
+            margin-bottom: 20px;
+        }
+
+        /* Padding & border add to the 300px width */
+        .content-box {
+            box-sizing: content-box;
+        }
+
+        /* Padding & border are included inside the 300px width */
+        .border-box {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+    <h3>1. box-sizing: content-box</h3>
+    <div class="box content-box">
+        Width is 300px + padding + border (Total: 340px wide).
+    </div>
+
+    <h3>2. box-sizing: border-box</h3>
+    <div class="box border-box">
+        Width includes padding + border (Total: exactly 300px wide).
+    </div>
+
+</body>
+</html>

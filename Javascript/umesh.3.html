@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Lab Work - Q3</title>
+</head>
+<body>
+
+    <h2>Add Two Numbers If Both Are Prime</h2>
+
+    <label for="num1">Enter First Number: </label>
+    <input type="number" id="num1"><br><br>
+
+    <label for="num2">Enter Second Number: </label>
+    <input type="number" id="num2"><br><br>
+
+    <button onclick="addPrimes()">Add Numbers</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+        
+        function isPrime(num) {
+            if (num <= 1) {
+                return false;
+            }
+            for (var i = 2; i < num; i++) {
+                if (num % i === 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function addPrimes() {
+            var n1 = parseInt(document.getElementById("num1").value);
+            var n2 = parseInt(document.getElementById("num2").value);
+
+            if (isNaN(n1) || isNaN(n2)) {
+                document.getElementById("result").innerHTML = "Please enter valid numbers.";
+                return;
+            }
+
+            var check1 = isPrime(n1);
+            var check2 = isPrime(n2);
+
+            if (check1 && check2) {
+                var sum = n1 + n2;
+                document.getElementById("result").innerHTML = "Both numbers are prime. Sum = " + sum;
+            } else {
+                document.getElementById("result").innerHTML = "Both numbers are not prime. Addition cannot be performed.";
+            }
+        }
+    </script>
+
+</body>
+</html>

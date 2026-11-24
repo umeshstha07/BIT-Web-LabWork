@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+
+    .demo-box {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      margin: 10px 0;
+    }
+
+    /* Target attribute containing substring */
+    [title*="important"] {
+      font-size: 1.2em;
+      color: #e74c3c;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="demo-box">
+    <p title="very-important-note">This is important</p>
+    <p title="regular-note">Regular notice</p>
+    <p title="important-alert">Important alert</p>
+  </div>
+
+</body>
+</html>

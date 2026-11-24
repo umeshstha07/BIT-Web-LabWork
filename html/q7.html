@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>usemap</title>
+</head>
+<body>
+
+    <!-- SECTION 1: Main Page (index.html equivalent) -->
+    <h2>The map and area elements</h2>
+    <p>Click on the computer, the phone, or the cup of coffee to go to a new page and read more about the topic:</p>
+
+    
+
+    <map name="workmap">
+        <!-- Links to inner sections of the same page -->
+        <area shape="rect" coords="30,30,200,180" alt="Computer" href="#computer-section">
+        <area shape="rect" coords="210,120,260,200" alt="Phone" href="#phone-section">
+        <area shape="circle" coords="235,220,25" alt="Coffee" href="#coffee-section">
+    </map>
+
+    <br><br><hr><br>
+
+    <!-- SECTION 2: Computer Content (computer.html equivalent) -->
+    <div id="computer-section">
+        <h2>Computer</h2>
+        <img src="computer.jpg" alt="Computer" width="200" height="130">
+        <p>
+            Wikipedia says: A computer is a device that can be instructed to carry out arbitrary sequences of arithmetic or logical operations automatically. Read more about computer on <a href="https://en.wikipedia.org/wiki/Computer">https://en.wikipedia.org/wiki/Computer</a>
+        </p>
+    </div>
+
+    <br><hr><br>
+
+    <!-- SECTION 3: Phone Content (phone.html equivalent) -->
+    <div id="phone-section">
+        <h2>Phone</h2>
+        <img src="phone.jpg" alt="Phone" width="200" height="130">
+        <p>
+            Wikipedia says: A telephone, or phone, is a telecommunications device that permits two or more users to conduct a conversation when they are too far apart to be heard directly. Read more about phone on <a href="https://en.wikipedia.org/wiki/Telephone">https://en.wikipedia.org/wiki/Telephone</a>
+        </p>
+    </div>
+
+    <br><hr><br>
+
+    <!-- SECTION 4: Coffee Content (coffee.html equivalent) -->
+    <div id="coffee-section">
+        <h2>Coffee</h2>
+        <img src="coffee.jpg" alt="Coffee" width="200" height="130">
+        <p>
+            Wikipedia says: Coffee is a brewed drink prepared from roasted coffee beans, which are the seeds of berries from the Coffee plant. Read more about coffee on <a href="https://en.wikipedia.org/wiki/Coffee">https://en.wikipedia.org/wiki/Coffee</a>
+        </p>
+    </div>
+
+</body>
+</html>
+

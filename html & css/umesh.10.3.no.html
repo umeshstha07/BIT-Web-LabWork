@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Clear Right</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f8f9fa;
+        }
+
+        h2 {
+            margin-bottom: 2px;
+        }
+
+        .container {
+            width: 300px;
+            border: 2px solid black;
+            background: #a0cbe8;
+            padding: 10px;
+            margin-top: 2px;
+        }
+
+        /* First element floats right */
+        .right-box {
+            float: right;
+            width: 100px;
+            height: 60px;
+            background: #ffffcc;
+            text-align: center;
+        }
+
+        /* clear: right forces text below right-floated elements (no background color) */
+        .cleared-box {
+            clear: right;
+            padding-top: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Clear Right Example</h2>
+    <div class="container">
+        <div class="right-box">Float Right</div>
+        <div class="cleared-box">The text is cleared on the right</div>
+    </div>
+
+</body>
+</html>

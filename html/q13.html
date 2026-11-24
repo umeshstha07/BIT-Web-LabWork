@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create the following form</title>
+</head>
+<body>
+
+    <form action="#" method="post">
+        <fieldset>
+            <legend>Survey Form</legend>
+
+            <!-- Contact Information Section -->
+            <h3>Contact Information</h3>
+            
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="umesh@gmail.com">
+            <br><br>
+
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstname" name="firstname" placeholder="umesh" maxlength="20">
+            <br><br>
+
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastname" name="lastname" placeholder="stha" maxlength="20">
+            <br><br>
+
+            <!-- Geographic Information Section -->
+            <h3>Geographic Information</h3>
+
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" placeholder="e.g. Province 3">
+            <br><br>
+
+            <label for="zipcode">Zip Code:</label>
+            <input type="text" id="zipcode" name="zipcode" placeholder="44800" pattern="[0-9]{5}" title="ZIP code must be exactly 5 digits">
+            <br><br>
+
+            <!-- How did you hear about us Section -->
+            <h3>How did you hear about us?</h3>
+
+            <input type="checkbox" id="websearch" name="source" value="websearch" checked>
+            <label for="websearch">websearch</label>
+            <br>
+
+            <input type="checkbox" id="facebook" name="source" value="facebook">
+            <label for="facebook">facebook</label>
+            <br>
+
+            <input type="checkbox" id="twitter" name="source" value="twitter" checked>
+            <label for="twitter">twitter</label>
+            <br>
+
+            <input type="checkbox" id="email_msg" name="source" value="email message">
+            <label for="email_msg">email message</label>
+            <br><br>
+
+            <!-- Suggestions Section -->
+            <h3>Any Suggestions</h3>
+
+            <textarea name="suggestions" rows="6" cols="35" placeholder="Type your Suggestions here.."></textarea>
+            <br><br>
+
+            <!-- Footer Message -->
+            <b>Thank You for taking our survey.</b>
+            <br><br>
+
+            <!-- Action Buttons -->
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+
+        </fieldset>
+    </form>
+
+</body>
+</html>

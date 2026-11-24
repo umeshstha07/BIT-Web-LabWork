@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BMC BIT Student Portal</title>
+  
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+  <!-- ================= 1. NAVIGATION BAR ================= -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      
+      <!-- Brand Logo / Title -->
+      <a class="navbar-brand fw-bold" href="#">
+        <i class="bi bi-laptop"></i> BMC BIT Portal
+      </a>
+      
+      <!-- Navigation Menu Links -->
+      <div class="navbar-nav ms-auto d-flex flex-row gap-3">
+        <a class="nav-link active" href="#home">
+          <i class="bi bi-house"></i> Home
+        </a>
+        <a class="nav-link" href="#about">
+          <i class="bi bi-info-circle"></i> About
+        </a>
+        <a class="nav-link" href="#resources">
+          <i class="bi bi-folder"></i> Resources
+        </a>
+        <a class="nav-link" href="#contact">
+          <i class="bi bi-envelope"></i> Contact
+        </a>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- ================= NOTICE ALERT COMPONENT ================= -->
+  <div class="container mt-3">
+    <div class="alert alert-warning text-center" role="alert">
+      <i class="bi bi-bell-fill"></i> 
+      <strong>Important Notice:</strong> Exam form filling has officially started at the college office!
+    </div>
+  </div>
+
+  <!-- ================= 2. HERO / BANNER SECTION ================= -->
+  <section id="home" class="bg-primary text-white text-center py-5">
+    <div class="container">
+      <h1 class="display-5 fw-bold">Bachelor of Information Technology</h1>
+      <p class="lead">Bhaktapur Multiple Campus - Tribhuvan University</p>
+      <a href="#resources" class="btn btn-light btn-lg mt-2">
+        <i class="bi bi-book"></i> View Resources
+      </a>
+    </div>
+  </section>
+
+  <!-- ================= MAIN CONTENT CONTAINER ================= -->
+  <div class="container my-5">
+
+    <!-- ================= CONTENT SECTION 1: ABOUT BIT ================= -->
+    <section id="about" class="mb-5">
+      <h2 class="text-center mb-4">About BIT Program</h2>
+      
+      <!-- Bootstrap Responsive Grid (1 Column Mobile, 3 Columns Desktop) -->
+      <div class="row">
+        
+        <div class="col-12 col-md-4 mb-3">
+          <div class="card h-100 p-3 text-center shadow-sm">
+            <div class="card-body">
+              <i class="bi bi-journal-code display-4 text-primary mb-2"></i>
+              <h5 class="card-title">Curriculum</h5>
+              <p class="card-text">A comprehensive 4-year semester degree program under Tribhuvan University.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4 mb-3">
+          <div class="card h-100 p-3 text-center shadow-sm">
+            <div class="card-body">
+              <i class="bi bi-laptop display-4 text-primary mb-2"></i>
+              <h5 class="card-title">Practical Focus</h5>
+              <p class="card-text">Hands-on practical lab training, workshops, and  projects.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4 mb-3">
+          <div class="card h-100 p-3 text-center shadow-sm">
+            <div class="card-body">
+              <i class="bi bi-briefcase display-4 text-primary mb-2"></i>
+              <h5 class="card-title">Careers</h5>
+              <p class="card-text">Prepares students for software engineering, web development, and networking roles.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= CONTENT SECTION 2: STUDENT RESOURCES ================= -->
+    <section id="resources" class="mb-5">
+      <h2 class="text-center mb-4">Student Resources</h2>
+      
+      <div class="row">
+        
+        <div class="col-12 col-md-4 mb-3">
+          <div class="card h-100 p-3 border-primary shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Old Question Papers</h5>
+              <p class="card-text">Download previous year board exam question papers for preparation.</p>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-download"></i> Download
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4 mb-3">
+          <div class="card h-100 p-3 border-primary shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Syllabus</h5>
+              <p class="card-text">View subject topics and course guidelines for all 8 semesters.</p>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-eye"></i> View Syllabus
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4 mb-3">
+          <div class="card h-100 p-3 border-primary shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Lab Manuals</h5>
+              <p class="card-text">Access practical lab sheets, code examples, and assignment guidelines.</p>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-file-earmark-code"></i> Open Manuals
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= CONTENT SECTION 3: NEWS & CONTACT ================= -->
+    <section id="contact">
+      <div class="row">
+        
+        <!-- Left Column: Latest News -->
+        <div class="col-12 col-md-6 mb-4">
+          <h3 class="mb-3">Latest News</h3>
+          <ul class="list-group shadow-sm">
+            <li class="list-group-item py-3">
+              <i class="bi bi-calendar-event text-primary me-2"></i> 
+              First internal examination starts next week.
+            </li>
+            <li class="list-group-item py-3">
+              <i class="bi bi-file-earmark-text text-primary me-2"></i> 
+              Web Technology practical lab report submission deadline.
+            </li>
+            <li class="list-group-item py-3">
+              <i class="bi bi-person-video3 text-primary me-2"></i> 
+              Guest lecture on modern web development scheduled on Friday.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right Column: Contact Form -->
+        <div class="col-12 col-md-6 mb-4">
+          <h3 class="mb-3">Contact Us</h3>
+          <form class="card p-4 shadow-sm border">
+            
+            <div class="mb-3">
+              <label class="form-label">Full Name</label>
+              <input type="text" class="form-control" placeholder="Enter your full name">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Email Address</label>
+              <input type="email" class="form-control" placeholder="Enter your email address">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Message</label>
+              <textarea class="form-control" rows="3" placeholder="Write your query here..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">
+              <i class="bi bi-send-fill"></i> Send Message
+            </button>
+
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ================= 4. FOOTER ================= -->
+  <footer class="bg-dark text-white text-center py-4 mt-5">
+    <div class="container">
+      
+      <!-- Copyright Information -->
+      <p class="mb-2">
+        &copy; 2026 Bhaktapur Multiple Campus - BIT Department | Tribhuvan University
+      </p>
+      
+      <!-- Social Media Icons -->
+      <div>
+        <a href="#" class="text-white mx-2"><i class="bi bi-facebook fs-5"></i></a>
+        <a href="#" class="text-white mx-2"><i class="bi bi-instagram fs-5"></i></a>
+        <a href="#" class="text-white mx-2"><i class="bi bi-linkedin fs-5"></i></a>
+        <a href="#" class="text-white mx-2"><i class="bi bi-twitter-x fs-5"></i></a>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>

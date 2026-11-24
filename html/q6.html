@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>use of map concept</title>
+</head>
+<body>
+
+    <h2>Demonstration of Image Map (&lt;map&gt; Tag)</h2>
+
+    <!-- Image with usemap attribute pointing to the map name -->
+    <img src="workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
+
+    <!-- Defining the image map -->
+    <map name="workmap">
+        <!-- Rectangular clickable area (computer) -->
+        <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.html">
+        
+        <!-- Circular clickable area (phone) -->
+        <area shape="circle" coords="337,300,44" alt="Phone" href="phone.html">
+        
+        <!-- Polygon clickable area (coffee cup) -->
+        <area shape="poly" coords="290,172,333,250,300,250" alt="Coffee" href="coffee.html">
+    </map>
+
+</body>
+</html>

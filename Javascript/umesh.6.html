@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Lab Work - Q6</title>
+</head>
+<body>
+
+    <h2>Associative Array using for...in Loop</h2>
+
+    <button onclick="displayAssociativeArray()">Display Array Contents</button>
+
+    <div id="result"></div>
+
+    <script>
+        function displayAssociativeArray() {
+            var student = [];
+            student["name"] = "Umesh Stha";
+            student["age"] = 20;
+            student["faculty"] = "BIT";
+            student["college"] = "Bhaktapur Multiple Campus";
+
+            var output = "<h3>Student Information:</h3><ul>";
+
+            for (var key in student) {
+                output += "<li><b>" + key + "</b>: " + student[key] + "</li>";
+            }
+
+            output += "</ul>";
+
+            document.getElementById("result").innerHTML = output;
+        }
+    </script>
+
+</body>
+</html>

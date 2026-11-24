@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Tooltip</title>
+    <style>
+        body { font-family: Arial; background: #f8f9fa; }
+
+        .container {
+            border: 1px solid red;
+            background: white;
+            width: 450px;
+            padding: 20px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* Base Button */
+        .btn {
+            position: relative;
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        /* Base Tooltip Style */
+        .tip {
+            visibility: hidden;
+            width: 100px;
+            background: #2c3e50;
+            color: white;
+            padding: 5px;
+            position: absolute;
+            font-size: 12px;
+        }
+
+        /* Show tooltip on hover */
+        .btn:hover .tip { visibility: visible; }
+
+        /* --- TOOLTIP POSITIONS --- */
+        /* Top Position */
+        .tip-top {
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Bottom Position */
+        .tip-bottom {
+            top: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Left Position */
+        .tip-left {
+            right: 105%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        /* Right Position */
+        .tip-right {
+            left: 105%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        /* --- TOOLTIP COLOR VARIANTS --- */
+        .green { background: #2ecc71; }
+        .orange { background: #f39c12; }
+        .red { background: #e74c3c; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>CSS Tooltip Example</h2>
+        <p>Hover over the buttons below to see different tooltips.</p>
+
+        <!-- Top Tooltip -->
+        <button class="btn">
+            Top Tooltip
+            <span class="tip tip-top">This is default tooltip</span>
+        </button>
+
+        <!-- Bottom Tooltip (Success) -->
+        <button class="btn">
+            Bottom Tooltit
+            <span class="tip tip-top green">This is Success tooltip</span>
+        </button>
+
+        <br><br>
+
+        <!-- Left Tooltip (Warning) -->
+        <button class="btn">
+            Left Tooltip
+            <span class="tip tip-left orange">This is Warning tooltip</span>
+        </button>
+
+        <!-- Right Tooltip (Danger) -->
+        <button class="btn">
+            Right Tooltip
+            <span class="tip tip-right red">This is Danger tooltip</span>
+        </button>
+    </div>
+
+</body>
+</html>

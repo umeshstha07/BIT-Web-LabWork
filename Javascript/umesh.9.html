@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Lab Work - Q9</title>
+</head>
+<body>
+
+    <h2>Date Comparison</h2>
+
+    <button onclick="compareDates()">Compare Today's Date</button>
+
+    <p id="result"></p>
+
+    <script>
+        function compareDates() {
+            var today = new Date();
+            
+            var targetDate = new Date(2026, 1, 15); 
+
+            if (today > targetDate) {
+                alert("Today's date is AFTER February 15, 2026.");
+                document.getElementById("result").innerHTML = "Today's date is AFTER February 15, 2026.";
+            } else if (today < targetDate) {
+                alert("Today's date is BEFORE February 15, 2026.");
+                document.getElementById("result").innerHTML = "Today's date is BEFORE February 15, 2026.";
+            } else {
+                alert("Today is February 15, 2026.");
+                document.getElementById("result").innerHTML = "Today is February 15, 2026.";
+            }
+        }
+    </script>
+
+</body>
+</html>

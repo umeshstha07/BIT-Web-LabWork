@@ -1,0 +1,85 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create the following form</title>
+</head>
+<body>
+
+    <form action="#" method="post" autocomplete="on">
+        <fieldset>
+            <legend>Personal car information</legend>
+
+            <!-- Full Name -->
+            <label>Full Name:</label>
+            <input type="text" name="fullname" placeholder="Your fullname" autofocus required>
+            <br><br>
+
+            <!-- Current City -->
+            <label>Current City:</label>
+            <input type="text" name="city" placeholder="e.g. Bhaktapur">
+            <br><br>
+
+            <!-- Email -->
+            <label>Email:</label>
+            <input type="email" name="email" placeholder="umesh@gmail.com" required>
+            <br><br>
+
+            <!-- Phone Number (NTC pattern: 9841XXXXXX or 9851XXXXXX) -->
+            <label>phone:</label>
+            <input type="tel" name="phone" placeholder="9841******" pattern="(9841|9851)[0-9]{6}" required>
+            <br><br>
+
+            <!-- Gender -->
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="Male" checked>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label>
+            <br><br>
+
+            <!-- Birthday (1997 to 2012 A.D.) -->
+            <label>Birthday:</label>
+            <input type="date" name="birthday" min="1997-01-01" max="2012-12-31">
+            <br><br>
+
+            <!-- Choose Car Company -->
+            <label>Choose Car Company:</label><br>
+            <select name="car_company" size="5">
+                <optgroup label="American:">
+                    <option value="jeep">Jeep</option>
+                    <option value="ford">Ford</option>
+                    <option value="tesla">Tesla</option>
+                </optgroup>
+                <optgroup label="Indian:">
+                    <option value="tata">Tata</option>
+                    <option value="mahindra">Mahindra</option>
+                </optgroup>
+                <optgroup label="European:">
+                    <option value="bmw">BMW</option>
+                    <option value="audi">Audi</option>
+                </optgroup>
+            </select>
+            <br><br>
+
+            <!-- Additional Information -->
+            <label>Additional information:</label><br>
+            <textarea name="additional_info" rows="6" cols="35"></textarea>
+            <br><br>
+
+            <!-- Terms & Policy Checkbox -->
+            <input type="checkbox" id="terms" name="terms" checked required>
+            <label for="terms">I agree to the termsand policy.</label>
+            <br><br>
+
+            <!-- Buttons -->
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+
+        </fieldset>
+    </form>
+
+</body>
+</html>
+
+```

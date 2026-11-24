@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Box Decoration Break Example</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; line-height: 2.5; }
+
+        .tag {
+            padding: 5px 10px;
+            border: 2px solid blue;
+            background-color: lightblue;
+        }
+
+        /* Cuts off styling at the line break */
+        .slice {
+            -webkit-box-decoration-break: slice;
+            box-decoration-break: slice;
+        }
+
+        /* Repeats border and padding on each broken line */
+        .clone {
+            -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
+            border-color: red;
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+
+    <h3>1. box-decoration-break: slice</h3>
+    <p>
+        <span class="tag slice">
+            This tag wraps onto<br>
+            the next line using slice.
+        </span>
+    </p>
+
+    <h3>2. box-decoration-break: clone</h3>
+    <p>
+        <span class="tag clone">
+            This tag wraps onto<br>
+            the next line using clone.
+        </span>
+    </p>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Box Sizing & Decoration Break Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            line-height: 2;
+        }
+
+        .box {
+            width: 300px;
+            padding: 15px;
+            border: 5px solid green;
+            background: white;
+            margin-bottom: 20px;
+        }
+
+        /* 1. box-sizing properties */
+        .content-box {
+            box-sizing: content-box; /* Outer size grows bigger than 300px */
+        }
+
+        .border-box {
+            box-sizing: border-box; /* Total width stays exactly 300px */
+        }
+
+        /* 2. box-decoration-break properties */
+        .slice-example {
+            background: lightblue;
+            border: 2px solid blue;
+            padding: 5px;
+            -webkit-box-decoration-break: slice;
+            box-decoration-break: slice; /* Cuts styling across line breaks */
+        }
+
+        .clone-example {
+            background: lightcoral;
+            border: 2px solid red;
+            padding: 5px;
+            -webkit-box-decoration-break: clone;
+            box-decoration-break: clone; /* Repeats styling on each broken line */
+        }
+    </style>
+</head>
+<body>
+
+    <h3>1. box-sizing: content-box</h3>
+    <div class="box content-box">
+        Width is 300px + padding + border (Total: 340px wide).
+    </div>
+
+    <h3>2. box-sizing: border-box</h3>
+    <div class="box border-box">
+        Width includes padding + border (Total: exactly 300px wide).
+    </div>
+
+    <h3>3. box-decoration-break: slice</h3>
+    <p>
+        <span class="slice-example">
+            This text wraps onto<br>
+            the next line using slice.
+        </span>
+    </p>
+
+    <h3>4. box-decoration-break: clone</h3>
+    <p>
+        <span class="clone-example">
+            This text wraps onto<br>
+            the next line using clone.
+        </span>
+    </p>
+
+</body>
+</html>

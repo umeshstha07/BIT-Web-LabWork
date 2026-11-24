@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMC BIT Student Portal</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+  <!-- ================= 1. NAVIGATION BAR ================= -->
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container">
+
+      <a class="navbar-brand fw-bold" href="#">
+        <i class="bi bi-laptop"></i> BMC BIT Portal
+      </a>
+
+      <div class="navbar-nav d-flex flex-row gap-3">
+
+        <a class="nav-link" href="#home">
+          <i class="bi bi-house"></i> Home
+        </a>
+
+        <a class="nav-link" href="#about">
+          <i class="bi bi-info-circle"></i> About
+        </a>
+
+        <a class="nav-link" href="#services">
+          <i class="bi bi-gear"></i> Services
+        </a>
+
+        <a class="nav-link" href="#contact">
+          <i class="bi bi-envelope"></i> Contact
+        </a>
+
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ================= 2. HERO SECTION ================= -->
+  <section id="home" class="bg-primary text-white text-center py-5">
+
+    <div class="container">
+
+      <h1 class="display-5 fw-bold">
+        Bachelor of Information Technology
+      </h1>
+
+      <p class="lead">
+        Bhaktapur Multiple Campus - Tribhuvan University
+      </p>
+
+      <a href="#services" class="btn btn-light">
+        <i class="bi bi-book"></i> View Services
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= 3. ABOUT SECTION ================= -->
+  <section id="about" class="container my-5">
+
+    <h2 class="text-center mb-4">About BIT</h2>
+
+    <div class="row">
+
+      <div class="col-12 col-md-4 mb-3">
+        <div class="card text-center h-100 p-3 shadow-sm">
+
+          <i class="bi bi-book display-5 text-primary"></i>
+
+          <h5>Curriculum</h5>
+
+          <p>
+            A 4-year semester-based BIT degree program.
+          </p>
+
+        </div>
+      </div>
+
+
+      <div class="col-12 col-md-4 mb-3">
+        <div class="card text-center h-100 p-3 shadow-sm">
+
+          <i class="bi bi-laptop display-5 text-primary"></i>
+
+          <h5>Practical Focus</h5>
+
+          <p>
+            Practical labs, projects and workshops.
+          </p>
+
+        </div>
+      </div>
+
+
+      <div class="col-12 col-md-4 mb-3">
+        <div class="card text-center h-100 p-3 shadow-sm">
+
+          <i class="bi bi-briefcase display-5 text-primary"></i>
+
+          <h5>Career</h5>
+
+          <p>
+            Opportunities in software, web and networking.
+          </p>
+
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= 4. SERVICES SECTION ================= -->
+  <section id="services" class="container my-5">
+
+    <h2 class="text-center mb-4">Student Services</h2>
+
+    <div class="row">
+
+      <div class="col-12 col-md-4 mb-3">
+
+        <div class="card h-100 p-3 shadow-sm">
+
+          <div class="card-body">
+
+            <h5>
+              <i class="bi bi-file-earmark-text text-primary"></i>
+              Question Papers
+            </h5>
+
+            <p>
+              Previous year question papers for exam preparation.
+            </p>
+
+            <a href="#" class="btn btn-outline-primary">
+              Download
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-12 col-md-4 mb-3">
+
+        <div class="card h-100 p-3 shadow-sm">
+
+          <div class="card-body">
+
+            <h5>
+              <i class="bi bi-book text-primary"></i>
+              Syllabus
+            </h5>
+
+            <p>
+              View subjects and course guidelines.
+            </p>
+
+            <a href="#" class="btn btn-outline-primary">
+              View
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-12 col-md-4 mb-3">
+
+        <div class="card h-100 p-3 shadow-sm">
+
+          <div class="card-body">
+
+            <h5>
+              <i class="bi bi-file-code text-primary"></i>
+              Lab Manuals
+            </h5>
+
+            <p>
+              Practical lab sheets and assignments.
+            </p>
+
+            <a href="#" class="btn btn-outline-primary">
+              Open
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= 5. CONTACT SECTION ================= -->
+  <section id="contact" class="container my-5">
+
+    <h2 class="text-center mb-4">Contact Us</h2>
+
+    <div class="row justify-content-center">
+
+      <div class="col-12 col-md-6">
+
+        <form class="card p-4 shadow-sm">
+
+          <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-control" placeholder="Enter your name">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" placeholder="Enter your email">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Message</label>
+            <textarea class="form-control" rows="3"></textarea>
+          </div>
+
+          <button class="btn btn-primary">
+            <i class="bi bi-send"></i> Send
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= 6. FOOTER ================= -->
+  <footer class="bg-dark text-white text-center py-4">
+
+    <p>
+      &copy; 2026 BMC BIT Portal | Tribhuvan University
+    </p>
+
+    <a href="#" class="text-white mx-2">
+      <i class="bi bi-facebook"></i>
+    </a>
+
+    <a href="#" class="text-white mx-2">
+      <i class="bi bi-instagram"></i>
+    </a>
+
+    <a href="#" class="text-white mx-2">
+      <i class="bi bi-linkedin"></i>
+    </a>
+
+    <a href="#" class="text-white mx-2">
+      <i class="bi bi-twitter-x"></i>
+    </a>
+
+  </footer>
+
+</body>
+</html>

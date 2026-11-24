@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mobile Layout - CSS Grid</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f8f9fa;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "header"
+                "nav"
+                "main"
+                "sidebar"
+                "ads"
+                "footer";
+            gap: 10px;
+            width: 320px;
+            margin: 0 auto;
+        }
+
+        .box {
+            border: 1px solid red;
+            background: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Area assignments */
+        .header  { grid-area: header; }
+        .nav     { grid-area: nav; }
+        .main    { grid-area: main; height: 150px; }
+        .sidebar { grid-area: sidebar; height: 60px; }
+        .ads     { grid-area: ads; height: 60px; }
+        .footer  { grid-area: footer; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header class="box header">Header</header>
+        <nav class="box nav">Navigation</nav>
+        <main class="box main">Main</main>
+        <aside class="box sidebar">Sidebar</aside>
+        <aside class="box ads">Ads</aside>
+        <footer class="box footer">Footer</footer>
+    </div>
+
+</body>
+</html>

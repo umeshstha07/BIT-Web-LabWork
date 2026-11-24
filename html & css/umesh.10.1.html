@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Overflow Property</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f8f9fa;
+        }
+
+        h3 {
+            margin-bottom: 2px;
+            margin-top: 10px;
+        }
+
+        .box {
+            width: 170px;
+            height: 70px;
+            border: 2px solid black;
+            background: yellow; /* Replaced lightblue with yellow */
+            margin-top: 2px;
+            margin-bottom: 15px;
+        }
+
+        .inner-content {
+            width: 220px;
+            height: 100px;
+            background: #f0ec70;
+            font-size: 12px;
+            padding: 3px;
+        }
+
+        /* 1. Visible: Content overflows outside the box */
+        .visible {
+            overflow: visible;
+        }
+
+        /* 2. Hidden: Extra content is cut off */
+        .hidden {
+            overflow: hidden;
+        }
+
+        /* 3. Scroll: Adds scrollbars to view content */
+        .scroll {
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+
+    <h3>1. overflow: visible</h3>
+    <div class="box visible">
+        <div class="inner-content">This content overflows outside the container box.</div>
+    </div>
+
+    <h3>2. overflow: hidden</h3>
+    <div class="box hidden">
+        <div class="inner-content">This extra content is clipped and hidden outside the box.</div>
+    </div>
+
+    <h3>3. overflow: scroll</h3>
+    <div class="box scroll">
+        <div class="inner-content">This content is scrollable inside the container box.</div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TechRadar Pro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+        }
+
+        .header {
+            background-color: #1a365d;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Flexbox layout to align items horizontally */
+        .products-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 15px;
+        }
+
+        .product-card {
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            padding: 15px;
+            width: 230px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        .rating {
+            color: gold;
+            margin-bottom: 8px;
+        }
+
+        .pro {
+            color: green;
+        }
+
+        .con {
+            color: red;
+        }
+
+        .footer {
+            background-color: #eee;
+            text-align: center;
+            padding: 20px;
+        }
+
+        button {
+            background-color: red;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>TechRadar Pro</h1>
+            <p>Your trusted source for technology reviews.</p>
+        </div>
+
+        <div class="products-container">
+            <!-- 1. Left Card -->
+            <div class="product-card">
+                <h3>Apple iPhone 17 Pro Max</h3>
+                <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9733; 4.8/5</div>
+                <p>Features A19 Pro chip, AI capabilities, and upgraded camera.</p>
+                <p class="pro">&#10003; Powerful performance</p>
+                <p class="con">&#10005; Premium price</p>
+                <b>Starting at $1,199</b>
+            </div>
+
+            <!-- 2. Middle Card -->
+            <div class="product-card">
+                <h3>MacBook Pro 16-inch</h3>
+                <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9733; 4.9/5</div>
+                <p>Powerful MacBook with fast CPU, GPU, and long battery life.</p>
+                <p class="pro">&#10003; M5 Max performance</p>
+                <p class="con">&#10005; Very expensive</p>
+                <b>Starting at $3,499</b>
+            </div>
+
+            <!-- 3. Right Card (Microsoft) -->
+            <div class="product-card">
+                <h3>Microsoft Surface Laptop 7</h3>
+                <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9733; 4.6/5</div>
+                <p>Delivers great battery life, Copilot+ features, and premium design.</p>
+                <p class="pro">&#10003; Great battery life</p>
+                <p class="con">&#10005; Legacy app issues</p>
+                <b>Starting at $1,199</b>
+            </div>
+        </div>
+
+        <div class="footer">
+            <h4>Stay Updated</h4>
+            <p>Subscribe for expert reviews and weekly tech deals.</p>
+            <button>Subscribe Now</button>
+            <p>&copy; 2026 TechRadar Pro</p>
+        </div>
+    </div>
+
+</body>
+</html>

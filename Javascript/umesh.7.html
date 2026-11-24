@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Lab Work - Q7</title>
+</head>
+<body>
+
+    <h2>Person Object Constructor</h2>
+
+    <button onclick="managePerson()">Display Name Details</button>
+
+    <div id="result"></div>
+
+    <script>
+        function Person(firstName, lastName) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+
+            this.changeLastName = function(newLastName) {
+                this.lastName = newLastName;
+            };
+        }
+
+        function managePerson() {
+            var person1 = new Person("Umesh", "Stha");
+
+            var output = "<p><b>Before calling method:</b> " + person1.firstName + " " + person1.lastName + "</p>";
+
+            person1.changeLastName("Shrestha");
+
+            output += "<p><b>After calling method:</b> " + person1.firstName + " " + person1.lastName + "</p>";
+
+            document.getElementById("result").innerHTML = output;
+        }
+    </script>
+
+</body>
+</html>

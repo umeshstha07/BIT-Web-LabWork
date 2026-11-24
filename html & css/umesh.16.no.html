@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Layout 2 - Flexbox</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f8f9fa;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 600px;
+            margin: 0 auto;
+        }
+
+        .box {
+            border: 1px solid red;
+            background: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Middle & Bottom Rows */
+        .middle-wrapper, .bottom-wrapper {
+            display: flex;
+            gap: 10px;
+        }
+
+        .sidebar, .ads {
+            width: 30%;
+        }
+
+        .main, .footer {
+            width: 70%;
+        }
+
+        .sidebar, .main {
+            height: 200px;
+        }
+
+        /* Mobile View: Stack vertically */
+        @media (max-width: 600px) {
+            .container {
+                width: 100%;
+            }
+
+            .middle-wrapper, .bottom-wrapper {
+                flex-direction: column;
+            }
+
+            .sidebar, .main, .ads, .footer {
+                width: 100%;
+            }
+
+            .sidebar, .ads {
+                height: 60px;
+            }
+
+            .main {
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header class="box">Header</header>
+        <nav class="box">Navigation</nav>
+
+        <div class="middle-wrapper">
+            <aside class="box sidebar">Sidebar</aside>
+            <main class="box main">Main</main>
+        </div>
+
+        <div class="bottom-wrapper">
+            <aside class="box ads">Ads</aside>
+            <footer class="box footer">Footer</footer>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Background Attachment</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f8f9fa;
+        }
+
+        .card {
+            border: 1px solid red;
+            background: white;
+            width: 400px;
+            height: 250px;
+            padding: 15px;
+            margin: 0 auto;
+            overflow-y: scroll;
+            background-image: url('image.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: local; /* Image scrolls along with the content */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h2>Background Attachment Example</h2>
+        <p>The background-attachment property sets whether a background image scrolls with  content or stays fixed in place.</p>
+        <p>Try scrolling inside this box to see how the text and background image move together.</p>
+        <p>Scroll down more to see the scrolling effect in action.</p>
+        <p>Scroll down </p>
+        <p>Scroll down </p>
+        <p>Scroll down </p>
+    </div>
+
+</body>
+</html>

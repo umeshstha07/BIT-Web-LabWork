@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Design a form of your own type</title>
+</head>
+<body>
+
+    <h2>Student Registration Form</h2>
+
+    <form action="#" method="post" autocomplete="on">
+        <fieldset>
+            <legend>Personal & Academic Details</legend>
+
+            <!-- Text input with autofocus and required -->
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" autofocus required>
+            <br><br>
+
+            <!-- Email input with autocomplete disabled for this specific field -->
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="student@example.com" required autocomplete="off">
+            <br><br>
+
+            <!-- Password input -->
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <br><br>
+
+            <!-- Number input -->
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="16" max="60">
+            <br><br>
+
+            <!-- Date input -->
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob">
+            <br><br>
+
+            <!-- Radio inputs -->
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="Male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label>
+            <br><br>
+
+            <!-- Checkbox inputs -->
+            <label>Hobbies:</label>
+            <input type="checkbox" id="coding" name="hobby" value="Coding">
+            <label for="coding">Coding</label>
+            <input type="checkbox" id="sports" name="hobby" value="Sports">
+            <label for="sports">Sports</label>
+            <br><br>
+
+            <!-- Select element (Dropdown) -->
+            <label for="faculty">Faculty:</label>
+            <select id="faculty" name="faculty">
+                <option value="bit">BIT</option>
+                <option value="bim">BIM</option>
+                <option value="bsc_csit">BSc.CSIT</option>
+            </select>
+            <br><br>
+
+            <!-- Disabled input field -->
+            <label for="status">System Status:</label>
+            <input type="text" id="status" name="status" value="Active Student" disabled>
+            <br><br>
+
+            <!-- Textarea element -->
+            <label for="bio">Short Bio:</label><br>
+            <textarea id="bio" name="bio" rows="4" cols="30" placeholder="Write something about yourself..."></textarea>
+            <br><br>
+
+            <!-- Submit and Reset buttons -->
+            <input type="submit" value="Register">
+            <input type="reset" value="Reset">
+
+        </fieldset>
+    </form>
+
+</body>
+</html>
+

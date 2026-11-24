@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Design - Flexbox</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f8f9fa;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 600px;
+            margin: 0 auto;
+        }
+
+        .box {
+            border: 1px solid red;
+            background: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* 3-Column Layout */
+        .middle-wrapper {
+            display: flex;
+            gap: 10px;
+        }
+
+        .sidebar, .ads {
+            width: 20%;
+            height: 200px;
+        }
+
+        .center-content {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .main {
+            flex: 1; /* Automatically expands to fill remaining vertical height */
+        }
+
+        /* Mobile View: Stack vertically */
+        @media (max-width: 600px) {
+            .container {
+                width: 100%;
+            }
+
+            .middle-wrapper {
+                flex-direction: column;
+            }
+
+            .sidebar, .center-content, .ads {
+                width: 100%;
+                height: auto;
+            }
+
+            .sidebar, .ads {
+                height: 60px;
+            }
+
+            .main {
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header class="box">Header</header>
+
+        <div class="middle-wrapper">
+            <aside class="box sidebar">Sidebar</aside>
+
+            <div class="center-content">
+                <nav class="box">Navigation</nav>
+                <main class="box main">Main</main>
+            </div>
+
+            <aside class="box ads">Ads</aside>
+        </div>
+
+        <footer class="box">Footer</footer>
+    </div>
+
+</body>
+</html>

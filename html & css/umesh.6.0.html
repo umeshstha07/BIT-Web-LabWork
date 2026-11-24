@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Anchor Pseudo-Classes</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f8f9fa;
+        }
+
+        .container {
+            border: 1px solid red;
+            background: white;
+            width: 300px;
+            padding: 15px;
+            margin: 0 auto;
+        }
+
+        a {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* Unvisited link */
+        a:link {
+            color: blue;
+        }
+
+        /* Visited link */
+        a:visited {
+            color: red;
+        }
+
+        /* Hover over link */
+        a:hover {
+            color: green;
+        }
+
+        /* Clicked link */
+        a:active {
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Anchor Pseudo-Classes</h2>
+        <a href="https://claude.ai" target="_blank">Visit Claude.ai</a>
+        <a href="https://maps.google.com">Visit Google Maps</a>
+        <a href="https://google.com">Visit Google.com</a>
+    </div>
+
+</body>
+</html>

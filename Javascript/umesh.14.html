@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Lab Work - Q14</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            transition: background-color 0.3s;
+        }
+        .bg-active {
+            background-color: lightgoldenrodyellow;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>jQuery Background & Visibility Toggle</h2>
+
+    <button id="toggleBgBtn">Toggle Background Color</button>
+    <button id="toggleParaBtn">Toggle Paragraph Visibility</button>
+
+    <br><br>
+
+    <p id="myParagraph">This is a paragraph that will be hidden or shown when you click the button above.</p>
+
+    <script>
+        $(document).ready(function(){
+            $("#toggleBgBtn").click(function(){
+                $("body").toggleClass("bg-active");
+            });
+
+            $("#toggleParaBtn").click(function(){
+                $("#myParagraph").toggle();
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Pseudo-Elements</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f8f9fa;
+        }
+
+        .container {
+            border: 1px solid red;
+            background: white;
+            width: 450px;
+            padding: 15px;
+            margin: 0 auto;
+        }
+
+        /* ::before - Adds text before the paragraph */
+        p::before {
+            content: "Hello! ";
+            color: blue;
+            font-weight: bold;
+        }
+
+        /* ::first-letter - Styles the first letter */
+        p::first-letter {
+            color: red;
+            font-size: 24px;
+        }
+
+        /* ::first-line - Styles the first line */
+        p::first-line {
+            color: green;
+        }
+
+        /* ::after - Adds text after the paragraph */
+        p::after {
+            content: " Goodbye!";
+            color: red;
+            font-weight: bold;
+        }
+
+        /* ::placeholder - Styles input hint text */
+        input::placeholder {
+            color: red;
+            font-style: italic;
+        }
+
+        /* ::selection - Styles text highlighted by user */
+        span::selection {
+            background: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>CSS Pseudo-Elements Example</h2>
+
+        <p>This is a paragraph inside a container div. It demonstrates how CSS pseudo-elements work to style text content before, after, and within an element easily.</p>
+
+        <label for="username">Enter your name: </label>
+        <input type="text" id="username" placeholder="Type your full name here..."><br><br>
+
+        <span>Select this sentence with your mouse to see the highlight effect.</span>
+    </div>
+
+</body>
+</html>

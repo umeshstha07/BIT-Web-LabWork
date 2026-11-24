@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TU BIT Student Portal</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 10px;
+        }
+
+        .container {
+            width: 700px;
+            margin: 0 auto;
+            background: white;
+            border: 2px solid #1a365d;
+        }
+
+        /* Header & Navigation */
+        .header {
+            background: #f8fafc;
+            text-align: center;
+            padding: 10px;
+            border-bottom: 2px solid #1a365d;
+        }
+
+        .nav {
+            background: #1a365d;
+            text-align: center;
+            padding: 8px;
+        }
+
+        .nav a {
+            color: white;
+            margin: 0 8px;
+            font-size: 12px;
+            text-decoration: none;
+        }
+
+        /* 3-Column Layout using Float */
+        .col-left {
+            float: left;
+            width: 150px;
+            padding: 10px;
+            border-right: 1px solid #ccc;
+        }
+
+        .col-middle {
+            float: left;
+            width: 320px;
+            padding: 10px;
+            border-right: 1px solid #ccc;
+        }
+
+        .col-right {
+            float: left;
+            width: 160px;
+            padding: 10px;
+        }
+
+        /* Common Elements */
+        h3, h4 {
+            color: #1a365d;
+            margin: 0 0 5px 0;
+        }
+
+        .notice {
+            background: #f1f5f9;
+            padding: 8px;
+            border-left: 3px solid #1a365d;
+            font-size: 11px;
+        }
+
+        .article {
+            border-bottom: 1px solid #eee;
+            margin-bottom: 10px;
+            padding-bottom: 8px;
+            font-size: 11px;
+        }
+
+        input {
+            width: 90%;
+            padding: 4px;
+            margin-bottom: 5px;
+        }
+
+        button {
+            background: #1a365d;
+            color: white;
+            border: none;
+            padding: 5px;
+            width: 95%;
+            cursor: pointer;
+        }
+
+        /* Footer with Clear */
+        .footer {
+            clear: both;
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 8px;
+            font-size: 11px;
+        }
+
+        .footer a {
+            color: #38bdf8;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="header">
+            <h2>BMC BIT STUDENT PORTAL</h2>
+            <p>Bhaktapur Multiple Campus | Tribhuvan University</p>
+        </div>
+
+        <div class="nav">
+            <a href="#">Home</a>
+            <a href="#">Syllabus</a>
+            <a href="#">Old Questions</a>
+            <a href="#">Notices</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <!-- Left Column -->
+        <div class="col-left">
+            <h4>BIT Subjects</h4>
+            <ul style="padding-left: 15px; font-size: 11px;">
+                <li>Artificial Intelligence</li>
+                <li>Networking</li>
+                <li>Operatons Research</li>
+                <li>DSA</li>
+                <li>Web Tech I</li>
+            </ul>
+
+            <h4>Notice Board</h4>
+            <div class="notice">
+                TU Board Exam forms are now available.<br>
+                <a href="#">Download</a>
+            </div>
+        </div>
+
+        <!-- Middle Column -->
+        <div class="col-middle">
+            <h3>Department Updates</h3>
+
+            <div class="article">
+                <b>Exam Schedule Released</b>
+                <p>TU IOST published the board exam routine for BIT students.</p>
+                <a href="#">View Routine</a>
+            </div>
+
+            <div class="article">
+                <b>Lab Work Submission</b>
+                <p>Submit HTML and CSS practical lab reports before evaluation.</p>
+                <a href="#">Read Guidelines</a>
+            </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="col-right">
+            <h4>Events</h4>
+            <ul style="padding-left: 15px; font-size: 11px;">
+                <li>Internal Assessment</li>
+                <li>Project Defense</li>
+            </ul>
+
+            <h4>Student Alert</h4>
+            <input type="text" placeholder="Roll No.">
+            <button>Get Alerts</button>
+        </div>
+
+        <div class="footer">
+            &copy; 2083 BMC BIT Department, Tribhuvan University.<br>
+            <a href="#">TU IOST</a> | <a href="#">BIT Result Portal</a>
+        </div>
+
+    </div>
+
+</body>
+</html>

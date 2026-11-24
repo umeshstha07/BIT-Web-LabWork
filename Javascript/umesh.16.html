@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q16 - AJAX External JSON</title>
+    <style>
+        .card {
+            width: 220px;
+            border: 1px solid #333;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="loadCard()">Fetch JSON Data</button>
+    <div id="output"></div>
+
+    <script>
+        function loadCard() {
+            var xhr = new XMLHttpRequest();
+            
+            xhr.open("GET", "data.json", true);
+
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    var data = JSON.parse(xhr.responseText);
+
+                    var card = "<div class='card'>";
+                    card += "<h3>" + data.name + "</h3>";
+                    card += "<p><b>Role:</b> " + data.role + "</p>";
+                    card += "<p><b>Email:</b> " + data.email + "</p>";
+                    card += "<p><b>Location:</b> " + data.location + "</p>";
+                    card += "</div>";
+
+                    document.getElementById("output").innerHTML = card;
+                }
+            };
+
+            xhr.send();
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parallax Effect</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Base styles for parallax containers */
+        .parallax-1, 
+        .parallax-2 {
+            height: 300px;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            
+            /* Modern flexbox centering */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        /* First background image */
+        .parallax-1 {
+            background-image: url('4k.jpg');
+        }
+
+        /* Second background image */
+        .parallax-2 {
+            background-image: url('4k1.jpg');
+        }
+
+        .content {
+            padding: 30px 20px;
+            background: white;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="parallax-1">
+        Parallax Scrolling Effect
+    </div>
+
+    <div class="content">
+        <h3>Scroll down to view</h3>
+        <p>Parallax scrolling occurs when background images move at a different speed than foreground content during scrolling.</p>
+        <p>Using background-attachment: fixed keeps the image stationary while the text scrolls over it seamlessly.</p>
+    </div>
+
+    <div class="parallax-2">
+        Second Parallax Section
+    </div>
+
+    <div class="content">
+        <h3>Clean and simple layout</h3>
+        <p>Additional text sections can be stacked between image containers to build single-page layouts easily.</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="books.xsl"?>
+<bookstore
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="books.xsd">
+    <book lang="en" category="cooking">
+        <title>Everyday Italian</title>
+        <author>Giada De Laurentiis</author>
+        <year>2005</year>
+        <price>30.00</price>
+    </book>
+    <book lang="en" category="programming">
+        <title>Learning JavaScript</title>
+        <author>John Smith</author>
+        <year>2024</year>
+        <price>65.00</price>
+    </book>
+    <book lang="en" category="web">
+        <title>HTML and CSS</title>
+        <author>David Brown</author>
+        <year>2023</year>
+        <price>75.00</price>
+    </book>
+</bookstore>

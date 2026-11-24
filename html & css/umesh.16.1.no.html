@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Layout</title>
+
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 3fr 7fr;
+            grid-template-areas:
+                "header header"
+                "nav nav"
+                "sidebar main"
+                "ads footer";
+            gap: 10px;
+            width: 600px;
+            margin: auto;
+        }
+
+        .box {
+            border: 1px solid red;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .header {
+            grid-area: header;
+        }
+
+        .nav {
+            grid-area: nav;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            height: 200px;
+        }
+
+        .main {
+            grid-area: main;
+            height: 200px;
+        }
+
+        .ads {
+            grid-area: ads;
+        }
+
+        .footer {
+            grid-area: footer;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                width: 100%;
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "header"
+                    "nav"
+                    "sidebar"
+                    "main"
+                    "ads"
+                    "footer";
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="box header">Header</div>
+
+        <div class="box nav">Navigation</div>
+
+        <div class="box sidebar">Sidebar</div>
+
+        <div class="box main">Main</div>
+
+        <div class="box ads">Ads</div>
+
+        <div class="box footer">Footer</div>
+
+    </div>
+
+</body>
+</html>
+```

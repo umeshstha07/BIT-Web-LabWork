@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Lab Work - Q5</title>
+</head>
+<body>
+
+    <h2>Compare Two Strings</h2>
+
+    <label for="str1">First String: </label>
+    <input type="text" id="str1"><br><br>
+
+    <label for="str2">Second String: </label>
+    <input type="text" id="str2"><br><br>
+
+    <button onclick="compareStrings()">Compare</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+        function compareStrings() {
+            var string1 = document.getElementById("str1").value;
+            var string2 = document.getElementById("str2").value;
+
+            if (string1 === string2) {
+                document.getElementById("result").innerHTML = "The first string is in uppercase";
+            } else {
+                document.getElementById("result").innerHTML = "The strings are not equal";
+            }
+        }
+    </script>
+
+</body>
+</html>

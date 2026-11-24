@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Lab Work - Q10</title>
+</head>
+<body>
+
+    <h2>Car Class and Inheritance</h2>
+
+    <button onclick="displayCarInfo()">Display Car Details</button>
+
+    <div id="result"></div>
+
+    <script>
+        class Car {
+            constructor(model, year) {
+                this.model = model;
+                this.year = year;
+            }
+
+            displayInfo() {
+                return "Car Model: " + this.model + "<br>Manufacturing Year: " + this.year;
+            }
+        }
+
+        class CarAge extends Car {
+            constructor(model, year) {
+                super(model, year);
+            }
+
+            calculateAge() {
+                var currentYear = new Date().getFullYear();
+                var age = currentYear - this.year;
+                return "Car Age: " + age + " years old";
+            }
+        }
+
+        function displayCarInfo() {
+            var myCar = new CarAge("Toyota", 2018);
+
+            var output = "<p>" + myCar.displayInfo() + "</p>";
+            output += "<p>" + myCar.calculateAge() + "</p>";
+
+            document.getElementById("result").innerHTML = output;
+        }
+    </script>
+
+</body>
+</html>

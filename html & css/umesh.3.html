@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* 1. Universal Selector */
+        * { font-family: Arial; }
+
+        /* 6. ID Selector */
+        #main-content {
+            border: 1px solid red;
+            width: 500px;
+            padding: 15px;
+            margin: 0 auto;
+        }
+
+        /* 2. Element Selector */
+        h1 { color: #2b7bb9; }
+
+        /* 4. Grouping Selector */
+        h2, h3, h4 { color: #2b7bb9; }
+
+        /* 5. Class Selector */
+        .highlight { background: yellow; }
+
+        /* 3. Descendant Selector */
+        nav li { display: inline; }
+
+        /* Extra layout rules matching the image text */
+        article > p { background: lightblue; }
+        h3 + p { background: lightblue; }
+    </style>
+</head>
+<body>
+
+    <div id="main-content">
+        <h1>Main Content Section</h1>
+
+        <article>
+            <h3>Article Title</h3>
+            <p>This paragraph is a direct child of the article (styled with child selector).</p>
+            <div>
+                <p>This paragraph is nested deeper (not styled with child selector).</p>
+            </div>
+            <p class="highlight">This paragraph has the highlight class applied.</p>
+        </article>
+
+        <h3>Another Heading</h3>
+        <p>This paragraph comes immediately after an h3 (styled with adjacent sibling selector).</p>
+        <p>This paragraph doesn't come immediately after an h3.</p>
+
+        <h3>Form Example</h3>
+        <form>
+            Name: <input type="text"><br><br>
+            Email: <input type="email">
+        </form>
+
+        <p>Visit our <a href="#">website</a> for more information (hover to see effect).</p>
+
+        <!-- Included so nav li works in HTML -->
+        <nav><ul style="display:none;"><li>Link</li></ul></nav>
+    </div>
+
+</body>
+</html>

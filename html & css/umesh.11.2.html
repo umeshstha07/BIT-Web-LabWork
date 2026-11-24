@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Facebook Sign Up</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f0f2f5;
+            text-align: center;
+        }
+
+        h1 {
+            color: #1877f2;
+        }
+
+        .card {
+            background: white;
+            width: 300px;
+            padding: 15px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 90%;
+            padding: 6px;
+            margin-bottom: 8px;
+        }
+
+        .row {
+            margin-bottom: 8px;
+        }
+
+        .btn-green {
+            background: #00a400;
+            color: white;
+            padding: 8px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        a {
+            display: block;
+            margin-top: 10px;
+            color: #1877f2;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>facebook</h1>
+
+    <div class="card">
+        <h3>Create a new account</h3>
+
+        <input type="text" placeholder="First name"><br>
+        <input type="text" placeholder="Last name"><br>
+        <input type="text" placeholder="Mobile or email"><br>
+        <input type="password" placeholder="New password"><br>
+
+        <div class="row">
+            <label>Birthday: </label>
+            <select><option>jan</option></select>
+            <select><option>29</option></select>
+            <select><option>2005</option></select>
+        </div>
+
+        <div class="row">
+            <label>Gender: </label>
+            <input type="radio" name="g"> Female
+            <input type="radio" name="g"> Male
+            <input type="radio" name="g"> Custom
+        </div>
+
+        <button class="btn-green">Sign Up</button>
+        <a href="#">Already have an account?</a>
+    </div>
+
+</body>
+</html>

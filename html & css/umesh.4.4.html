@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+
+    .demo-box {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+
+    a {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    /* Target attribute starting with specified value */
+    [href^="https"] {
+      color: #27ae60;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="demo-box">
+    <a href="https://example.com">Secure HTTPS Link</a>
+    <a href="http://example.com">Regular HTTP Link</a>
+    <a href="https://another.com">Another HTTPS Link</a>
+  </div>
+
+</body>
+</html>

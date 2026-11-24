@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Attribute Selectors Lab Report</title>
+    <style>
+        body { font-family: Arial; padding: 20px; background: #f8f9fa; }
+        
+        .box { background: white; border: 1px solid #ccc; padding: 15px; margin-bottom: 20px; }
+        h3 { color: #2b7bb9; margin-top: 0; }
+
+        /* 1. Exact code from image 1 */
+        [data-required] { border-left: 3px solid #e74c3c; }
+
+        /* 2. Exact code from image 1 */
+        [type="submit"] { background-color: #2ecc71; color: white; }
+
+        /* 3. Exact code from image 1 */
+        [class~="highlight"] { background-color: #f1c40f; }
+
+        /* 4. Exact code from image 1 */
+        [lang|="en"] { border-bottom: 2px dotted #3498db; }
+
+        /* 5. Exact code from image 2 */
+        [href^="https"] { color: #27ae60; font-weight: bold; }
+
+        /* 6. Exact code from image 2 */
+        [src$=".jpg"] { border: 3px solid #f39c12; }
+
+        /* 7. Exact code from image 2 */
+        [title*="important"] { font-size: 1.2em; color: #e74c3c; }
+    </style>
+</head>
+<body>
+
+    <!-- 1. [attribute] -->
+    <div class="box">
+        <h3>1. [attribute] Selector</h3>
+        <input type="text" data-required value="Required field">
+        <input type="text" value="Optional field">
+        <p data-required>This paragraph has the data-required attribute</p>
+    </div>
+
+    <!-- 2. [attribute="value"] -->
+    <div class="box">
+        <h3>2. [attribute="value"] Selector</h3>
+        <input type="button" value="Regular Button">
+        <button type="submit">Submit Button</button>
+        <input type="submit" value="Submit Input">
+    </div>
+
+    <!-- 3. [attribute~="value"] -->
+    <div class="box">
+        <h3>3. [attribute~="value"] Selector</h3>
+        <p class="highlight">This paragraph has the highlight class</p>
+        <p>This paragraph doesn't have highlight</p>
+        <p class="highlighted">This won't be selected (no exact match)</p>
+    </div>
+
+    <!-- 4. [attribute|="value"] -->
+    <div class="box">
+        <h3>4. [attribute|="value"] Selector</h3>
+        <p lang="en">English content</p>
+        <p lang="en-US">American English content</p>
+        <p lang="en-GB">British English content</p>
+        <p lang="fr">French content (not selected)</p>
+    </div>
+
+    <!-- 5. [attribute^="value"] -->
+    <div class="box">
+        <h3>5. [attribute^="value"] Selector</h3>
+        <a href="https://google.com">Secure HTTPS Link</a><br>
+        <a href="http://example.com">Regular HTTP Link</a><br>
+        <a href="https://facebook.com">Another HTTPS Link</a>
+    </div>
+
+    <!-- 6. [attribute$="value"] -->
+    <div class="box">
+        <h3>6. [attribute$="value"] Selector</h3>
+        <img src="mountain.jpg" width="80" alt="Mountain">
+        <img src="kayak.jpg" width="80" alt="Kayak">
+       
+    </div>
+
+    <!-- 7. [attribute*="value"] -->
+    <div class="box">
+        <h3>7. [attribute*="value"] Selector</h3>
+        <p title="This is important ">This is important</p>
+        <p title="regular notice">Regular notice</p>
+
+    </div>
+
+</body>
+</html>

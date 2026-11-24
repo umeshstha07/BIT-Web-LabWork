@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+
+    .demo-box {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+
+    input {
+      padding: 5px;
+      border: 1px solid #ccc;
+      margin-right: 5px;
+    }
+
+    /* Target element using attribute selector */
+    [data-required] {
+      border-left: 3px solid #e74c3c;
+    }
+
+    p {
+      margin-top: 15px;
+      margin-bottom: 0;
+      padding-left: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="demo-box">
+    <input type="text" value="Required field" data-required>
+    <input type="text" value="Optional field">
+    
+    <p data-required>This paragraph has the data-required attribute</p>
+  </div>
+
+</body>
+</html>

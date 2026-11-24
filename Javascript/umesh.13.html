@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Lab Work - Q13</title>
+</head>
+<body>
+
+    <h2>Form Validation</h2>
+
+    <form onsubmit="return validateForm()">
+        <label for="email">Email:</label><br>
+        <input type="text" id="email"><br><br>
+
+        <label for="phone">Phone Number:</label><br>
+        <input type="text" id="phone"><br><br>
+
+        <label for="password">Password:</label><br>
+        <input type="password" id="password"><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="errorMsg" style="color: red;"></p>
+
+    <script>
+        function validateForm() {
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+            var password = document.getElementById("password").value;
+            var error = document.getElementById("errorMsg");
+
+            error.innerHTML = "";
+
+            var emailRegex = /^[a-zA-Z0-9._%+-]+@(gmail\.com|hotmail\.com)$/;
+            if (!emailRegex.test(email)) {
+                error.innerHTML = "Invalid email! Must end with @gmail.com or @hotmail.com";
+                return false;
+            }
+
+            var phoneRegex = /^(9841\d{6}|9851\d{6}|980\d{7})$/;
+            if (!phoneRegex.test(phone)) {
+                error.innerHTML = "Invalid phone number! Must be NTC (9841/9851...) or NCELL (980...)";
+                return false;
+            }
+
+            if (password.length < 12) {
+                error.innerHTML = "Password must be at least 12 characters long";
+                return false;
+            }
+
+            var hasUpper = false;
+            var hasLower = false;
+            var hasNum = false;
+            var hasSpecial = false;
+
+            var specialChars = "!@#$%^&*()_+-=[]{}|;:',.<>?/";
+
+            for (var i = 0; i < password.length; i++) {
+                var ch = password[i];
+                if (ch >= 'A' && ch <= 'Z') hasUpper = true;
+                else if (ch >= 'a' && ch <= 'z') hasLower = true;
+                else if (ch >= '0' && ch <= '9') hasNum = true;
+                else if (specialChars.indexOf(ch) !== -1) hasSpecial = true;
+            }
+
+            if (!hasUpper || !hasLower || !hasNum || !hasSpecial) {
+                error.innerHTML = "Password must contain at least one uppercase, one lowercase, one number, and one special character";
+                return false;
+            }
+
+            alert("Form submitted successfully!");
+            return true;
+        }
+    </script>
+
+</body>
+</html>

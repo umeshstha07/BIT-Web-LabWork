@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q11 - Error Handling</title>
+</head>
+<body>
+
+    <h3>a) Using try...catch</h3>
+    <button onclick="testTryCatch()">Run Test</button>
+    <p id="res1"></p>
+
+    <h3>b) Using window.onerror</h3>
+    <button onclick="testOnError()">Trigger Error</button>
+    <p id="res2"></p>
+
+    <script>
+        function testTryCatch() {
+            try {
+                hello();
+            } catch (err) {
+                document.getElementById("res1").innerHTML = "Error: " + err.message;
+            }
+        }
+
+        window.onerror = function (msg) {
+            document.getElementById("res2").innerHTML = "Caught: " + msg;
+            return true;
+        };
+
+        function testOnError() {
+            alert(x);
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Lab Work - Q12</title>
+</head>
+<body>
+
+    <h2>Cookie Operations (Set, Get, Delete)</h2>
+
+    <button onclick="setCookie()">1. Set Cookie</button>
+    <button onclick="getCookie()">2. Get Cookie</button>
+    <button onclick="deleteCookie()">3. Delete Cookie</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+        function setCookie() {
+            var cookieName = "username";
+            var cookieValue = "Ram";
+            var days = 7;
+
+            var d = new Date();
+            d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+            var expires = "expires=" + d.toUTCString();
+
+            document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
+            document.getElementById("result").innerHTML = "Cookie set successfully!";
+        }
+
+        function getCookie() {
+            var name = "username=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var ca = decodedCookie.split(';');
+
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    var value = c.substring(name.length, c.length);
+                    document.getElementById("result").innerHTML = "Cookie Value: " + value;
+                    return;
+                }
+            }
+
+            document.getElementById("result").innerHTML = "Cookie not found!";
+        }
+
+        function deleteCookie() {
+            document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            document.getElementById("result").innerHTML = "Cookie deleted!";
+        }
+    </script>
+
+</body>
+</html>
